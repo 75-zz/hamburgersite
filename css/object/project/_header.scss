@@ -1,0 +1,16 @@
+@charset "UTF-8";
+:root {
+    --color-header-background: #fff7ef;
+    --color-header-text: #707070;
+}
+.p-header {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.p-header__logo {
+    align-self: center;
+    font-size: 4rem;
+    color: var(--color-header-text);
+    padding-left: 65px;
+}

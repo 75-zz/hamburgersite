@@ -1,0 +1,11 @@
+@charset "UTF-8";
+.p-hero__title {
+    align-self: center;
+    margin-left: 85px;
+    font-size: 40px;
+    font-family: "M+ 1m";
+    src: url(../../../font/mplus-1m-regular.ttf);
+    color: #fff;
+    align-self: center;
+    margin-left: 86px;
+}
