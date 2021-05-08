@@ -6,20 +6,12 @@
 /** 
 * Layout
 * ========================== */
-@import "layout/_container";
-@import "layout/_header";
-@import "layout/_footer";
-@import "layout/_main";
-@import "layout/_hero";
-@import "layout/_sidebar";
+@import "layout/**";
 /* Object 
 * ========================== */
 /* Component ------------ */ 
-@import "object/component/_branchcard";
+@import "object/component/**";
 
 /* Project ------------ */ 
-@import "object/project/_branchmenu";
-@import "object/project/_header";
-@import "object/project/_hero";
-@import "object/project/_search";
+@import "object/project/**";
 /* Utility ------------ */ 
