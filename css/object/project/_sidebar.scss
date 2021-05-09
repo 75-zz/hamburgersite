@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.p-nav {
+    padding: 82px 46px;
+    color: #707070;
+
+    .p-nav-title {
+        font-size: 2.12rem;
+        font-weight: bold;
+        margin-bottom: 85px;
+    }
+    ul {
+        > li {
+            font-size: 1.5rem;
+            font-weight: bold;
+
+        }
+        ul {
+            margin: 40px 0;
+
+            > li {
+                padding-left: 20px;
+                font-size: 1.25rem;
+                font-weight: normal;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

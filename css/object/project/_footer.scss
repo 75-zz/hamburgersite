@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.p-footer {
+    background-color: #9d8670;
+    background-image: url(../../../img/footer.png);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 39px 0 ;
+    ul {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 34px;
+        width: 100%;
+        li {
+            margin: 0 15px;
+            position: relative;
+        }
+        li:first-child::after {
+            content: "";
+            width: 2px;
+            height: 15px;
+            background-color: #fff;
+            position: absolute;
+            margin-left: 15px;
+            top:3px
+        }
+        small{
+            font-size: 0.87rem;
+            font-family: 'M+';
+        }
+    }
+}

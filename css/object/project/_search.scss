@@ -6,6 +6,15 @@
 .p-search-form {
     align-self: center;
     margin-right: 30px;
+    @include tab {
+        margin-right: 0;
+        margin-bottom: 40px;
+        };
+        @include sp {
+            width: 320px;
+            margin: 40px auto;
+            display: flex;
+        };
 }
 .p-search-form__keyword {
     border: 1px solid #999;
@@ -16,15 +25,24 @@
     height: 46px;
     font-family: FontAwesome;
     padding-left:10px;
+    @include sp {
+        width: 230px;
+        margin-right: 12px;
+    };
 }
 
 .p-search-form__submit {
     border: 1px solid #999;
     border-radius: 5px;
     background: linear-gradient(#f2ede9, #ded8d3);
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
     vertical-align: middle;
     padding: 10px 52px;
     color: #707070;
+    @include sp {
+        width: 78px;
+        padding: 12px 23px;
+        height: 46px;
+    };
 }

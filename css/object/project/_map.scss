@@ -1,0 +1,71 @@
+@charset "UTF-8";
+.p-map {
+    height: 649px;
+    position: relative;
+    width: 100%;
+    @include tab{
+        height: 415px;
+    };
+    @include sp{
+        height: 691px;
+    };
+    .p-map-direction {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($color: #000, $alpha: 0.29);
+        padding: 83px 119px;
+        display: block;
+        height: 100%;
+        color: #fff;
+        z-index: 10;
+        @include tab{
+            padding: 40px;
+        };
+        @include sp{
+            height: 415px;
+        };
+    
+        h3 {
+            font-size: 2.25rem;
+            position: relative;
+            @include tab{
+                font-size: 1.87rem;
+            };
+            }
+        h3::before {
+            content: "";
+            position: absolute;
+            width: 63px;
+            height: 4px;
+            background-color: #fff;
+            top: 91.5px;
+            @include tab{
+                width: 75px;
+                height: 2px;
+                top: 62px;
+            };
+        }
+        p {
+            padding-top: 119px;
+            font-size: 1rem;
+            @include tab{
+                padding-top: 40px;
+                font-size: 0.87rem;
+                line-height: 2rem;
+                font-weight: bold
+            };
+            @include sp{
+               height: 518px;
+               padding-bottom: 51px;
+               overflow: hidden;
+            };
+        }
+    }
+    img {
+        background-color: rgba($color: #000, $alpha: 1);
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+    }
+}

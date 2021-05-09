@@ -7,10 +7,20 @@
     display: flex;
     justify-content: space-between;
     height: 100%;
+    @include tab {
+        display: flex;
+        flex-direction: column;
+    };
+    
 }
 .p-header__logo {
     align-self: center;
     font-size: 4rem;
     color: var(--color-header-text);
     padding-left: 65px;
+    @include tab {
+        font-size: 2.5rem;
+        padding-left: 0;
+        margin-top: 40px
+        };
 }

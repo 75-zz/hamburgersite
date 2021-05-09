@@ -1,5 +1,15 @@
 @charset "UTF-8";
+.l-wrapper{
+    width: 100%;
+    overflow: hidden;
+
+    @include tab {
+        overflow: hidden;
+       };
+}
 .l-container{
 display: flex;
 justify-content: space-between;
+overflow: hidden;
+width: 100%;
 }

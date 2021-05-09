@@ -4,4 +4,7 @@
     height: 530px;
     background-image: url(../../img/front-page-hero.png);
     display: flex;
+    @include tab{
+        height: 285px;
+    };
 }

@@ -1,0 +1,82 @@
+@charset "UTF-8";
+.c-branch__card {
+    width: 40%;
+    height: 1193px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 20px 0;
+    margin: 0 auto;
+    @include tab {
+        width: 47%;
+        height: 681px;
+        padding: 12px 12px 0;
+    }
+    @include sp {
+        width: 100%;
+        height: 642px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+}
+.c-branch__card h3 {
+    color: #fff;
+    font-size: 5rem;
+    font-family: "Roboto", sans-serif;
+    @include tab {
+        font-size: 2.75rem;
+    }
+}
+.c-branch__card h3::before {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 4px;
+    background-color: #fff;
+    top: 116.5px;
+    @include tab {
+        width: 36px;
+        top: 85px;
+    }
+    @include sp {
+        display: none;
+    }
+}
+.c-branch__textarea {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    color: #3c2a10;
+    font-family: "M+ 1m";
+    src: url(../../../font/mplus-1m-regular.ttf);
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.c-branch__textarea dl {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 174px;
+}
+.c-branch__textarea dt {
+    font-size: 24px;
+    padding: 20px;
+    @include sp {
+        font-size: 22px;
+        padding: 20px 10px;
+        font-weight: bold;
+    }
+}
+.c-branch__textarea dd {
+    font-size: 16px;
+    padding: 0 20px;
+    @include tab {
+        height: 76px;
+        overflow: hidden;
+    }
+    @include sp {
+        height: 71px;
+        padding: 0 10px;
+    }
+}

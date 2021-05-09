@@ -4,8 +4,13 @@
     margin-left: 85px;
     font-size: 40px;
     font-family: "M+ 1m";
-    src: url(../../../font/mplus-1m-regular.ttf);
     color: #fff;
     align-self: center;
     margin-left: 86px;
+    @include tab{
+        font-size: 2.25rem;
+    };
+    @include sp {
+        margin-left: 25px;
+    };
 }
