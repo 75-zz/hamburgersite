@@ -5,7 +5,17 @@
 .l-sidebar{
 width: 20vw;
 background-color: var(--color-sidebar-background);
+transition: .2s ease-out;
+z-index: 100;
 @include tab {
-  display: none;
+  width:0;
+  z-index: 100;
 };
+}
+.l-sidebar.open-menu{
+  @include tab {
+    position: absolute;
+    right: 0;
+    width:367px;
+  };
 }

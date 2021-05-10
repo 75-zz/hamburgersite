@@ -354,6 +354,13 @@ li {
   width: 100%;
 }
 
+.l-hero-archive {
+  background-image: url(../../img/archive-hero.png);
+  display: flex;
+  height: 239px;
+  width: 100%;
+}
+
 .l-main {
   width: 80vw;
 }
@@ -364,7 +371,9 @@ li {
 
 .l-sidebar {
   background-color: var(--color-sidebar-background);
+  transition: .2s ease-out;
   width: 20vw;
+  z-index: 100;
 }
 
 /* Object 
@@ -632,11 +641,20 @@ li {
   .l-hero {
     height: 285px;
   }
+  .l-hero-archive {
+    height: 285px;
+  }
   .l-main {
     width: 100vw;
   }
   .l-sidebar {
-    display: none;
+    width: 0;
+    z-index: 100;
+  }
+  .l-sidebar.open-menu {
+    position: absolute;
+    right: 0;
+    width: 367px;
   }
   .c-branch__card {
     height: 681px;
@@ -693,6 +711,11 @@ li {
   .p-search-form {
     margin-bottom: 40px;
     margin-right: 0;
+  }
+  .p-nav .p-nav-title {
+    position: absolute;
+    right: 26px;
+    top: 18px;
   }
 }
 
