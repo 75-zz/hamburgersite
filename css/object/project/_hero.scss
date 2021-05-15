@@ -14,3 +14,26 @@
         margin-left: 25px;
     };
 }
+
+.p-hero-archive__title {
+    align-self: center;
+    margin-left: 85px;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    align-self: center;
+    margin-left: 86px;
+    @include tab{
+        font-size: 60px;
+    };
+    @include sp {
+        font-size: 36px;
+    };
+}
+.p-hero-archive__title span{
+font-size:1rem ;
+font-family: "M+ 1m";
+vertical-align: middle;
+padding-left: 20px;
+}
+

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.c-pagination {
+    display: block;
+    width:500px ;
+    margin: 50px auto;
+    position: relative;
+    p{
+        position: absolute;
+        left:-100px;
+        padding-top: 10px;
+
+    }
+    ul{
+        display: flex;
+        li{
+            width: 35px;
+            height: 35px;
+            border: 1px solid #707070;
+            text-align: center;
+            padding-top: 5px;
+            margin: 0 10px;
+        }
+    }
+    ul::before{
+        content: "<<";
+        padding-top: 5px;
+    }
+    ul::after{
+        content: ">>";
+        padding-top: 5px;
+    }
+
+}

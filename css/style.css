@@ -355,6 +355,8 @@ li {
 }
 
 .l-hero-archive {
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
   background-image: url(../../img/archive-hero.png);
   display: flex;
   height: 239px;
@@ -379,6 +381,34 @@ li {
 /* Object 
 * ========================== */
 /* Component ------------ */
+.c-cards {
+  display: flex;
+  height: 471px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.c-cards img {
+  width: 50%;
+}
+
+.c-cards .c-cards__textarea {
+  background-color: #3C2B1C;
+  color: #fff;
+  padding: 53px 63px;
+  width: 50%;
+}
+
+.c-cards .c-cards__textarea h3 {
+  font-size: 36px;
+  margin-bottom: 47px;
+}
+
+.c-cards .c-cards__textarea h4 {
+  font-size: 24px;
+  margin-bottom: 17px;
+}
+
 .c-branch__card {
   display: flex;
   flex-direction: column;
@@ -433,7 +463,67 @@ li {
   padding: 0 20px;
 }
 
+.c-pagination {
+  display: block;
+  margin: 50px auto;
+  position: relative;
+  width: 500px;
+}
+
+.c-pagination p {
+  left: -100px;
+  padding-top: 10px;
+  position: absolute;
+}
+
+.c-pagination ul {
+  display: flex;
+}
+
+.c-pagination ul li {
+  border: 1px solid #707070;
+  height: 35px;
+  margin: 0 10px;
+  padding-top: 5px;
+  text-align: center;
+  width: 35px;
+}
+
+.c-pagination ul::before {
+  content: "<<";
+  padding-top: 5px;
+}
+
+.c-pagination ul::after {
+  content: ">>";
+  padding-top: 5px;
+}
+
 /* Project ------------ */
+.p-content-archive {
+  padding: 60px 100px;
+}
+
+.p-content-archive h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.p-content-archive p {
+  font-size: 16px;
+  margin-bottom: 70px;
+}
+
+.p-content-archive button {
+  background-color: #fff;
+  border-radius: 76px;
+  color: #707070;
+  display: block;
+  height: 76px;
+  margin: 50px auto;
+  width: 292px;
+}
+
 .p-branch-contents {
   width: 100%;
 }
@@ -504,6 +594,7 @@ li {
 .p-header__logo {
   align-self: center;
   color: var(--color-header-text);
+  font-family: 'Roboto', sans-serif;
   font-size: 4rem;
   padding-left: 65px;
 }
@@ -516,6 +607,23 @@ li {
   font-size: 40px;
   margin-left: 85px;
   margin-left: 86px;
+}
+
+.p-hero-archive__title {
+  align-self: center;
+  align-self: center;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
+  margin-left: 85px;
+  margin-left: 86px;
+}
+
+.p-hero-archive__title span {
+  font-family: "M+ 1m";
+  font-size: 1rem;
+  padding-left: 20px;
+  vertical-align: middle;
 }
 
 .p-map {
@@ -595,39 +703,6 @@ li {
   vertical-align: middle;
 }
 
-/*.p-nav {
-    padding: 82px 46px;
-    color: #707070;
-
-    .p-nav-title {
-        font-size: 2.12rem;
-        font-weight: bold;
-        margin-bottom: 85px;
-        @include tab {
-            position: absolute;
-            right: 26px;
-            top:18px;
-          };
-    }
-    ul {
-        > li {
-            font-size: 1.5rem;
-            font-weight: bold;
-
-        }
-        ul {
-            margin: 40px 0;
-
-            > li {
-                padding-left: 20px;
-                font-size: 1.25rem;
-                font-weight: normal;
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
-*/
 .wrapper {
   height: 100%;
   overflow-x: hidden;
@@ -635,17 +710,7 @@ li {
 }
 
 .overlay {
-  background-color: #000;
-  content: "";
-  display: block;
-  height: 0;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  transition: opacity 0.5s;
-  width: 0;
-  z-index: 2;
+  display: none;
 }
 
 .overlay.open {
@@ -660,11 +725,9 @@ li {
   display: inline-block;
   font-size: 1.3rem;
   font-weight: bold;
-  position: fixed;
-  right: 16px;
-  top: 14px;
-  transform: translateX(0);
-  transition: transform 0.5s;
+  padding-left: 46px;
+  padding-top: 82px;
+  position: static;
   vertical-align: middle;
   z-index: 100;
 }
@@ -683,21 +746,18 @@ li {
 }
 
 .menu-trigger.active::after {
+  content: "Menu";
   display: block;
-  font-size: 3rem;
-  margin-top: -20px;
 }
 
 nav {
   background-color: #f2ede9;
   height: 100%;
   padding-top: 100px;
-  position: fixed;
+  position: static;
   right: 0;
   top: 0;
-  transform: translate(328px);
-  transition: all 0.5s;
-  width: 328px;
+  width: 367px;
   z-index: 10;
 }
 
@@ -707,7 +767,6 @@ nav.open {
 
 nav > ul {
   height: 100%;
-  overflow-y: scroll;
 }
 
 nav > ul > li {
@@ -725,10 +784,6 @@ nav > ul > li > ul > li {
   font-size: 20px;
   font-weight: normal;
   margin: 20px;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 /* Utility ------------ */
@@ -797,6 +852,9 @@ nav > ul > li > ul > li {
   .p-hero__title {
     font-size: 2.25rem;
   }
+  .p-hero-archive__title {
+    font-size: 60px;
+  }
   .p-map {
     height: 415px;
   }
@@ -821,13 +879,53 @@ nav > ul > li > ul > li {
     margin-bottom: 40px;
     margin-right: 0;
   }
+  .overlay {
+    background-color: #000;
+    content: "";
+    display: block;
+    height: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.5s;
+    width: 0;
+    z-index: 2;
+  }
+  .menu-trigger {
+    color: #707070;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0;
+    position: fixed;
+    right: 16px;
+    top: 14px;
+    transform: translateX(0);
+    transition: transform 0.5s;
+    vertical-align: middle;
+    z-index: 100;
+  }
+  .menu-trigger.active::after {
+    content: "×";
+    font-size: 3rem;
+    margin-top: -20px;
+  }
   nav {
+    position: fixed;
     transform: translate(367px);
+    transition: 0.5s;
     width: 367px;
   }
   nav {
-    transform: translate(328px);
     width: 328px;
+  }
+  nav > ul {
+    overflow-y: scroll;
+  }
+  nav > ul {
+    overflow-y: scroll;
   }
 }
 
@@ -858,6 +956,9 @@ nav > ul > li > ul > li {
   }
   .p-hero__title {
     margin-left: 25px;
+  }
+  .p-hero-archive__title {
+    font-size: 36px;
   }
   .p-map {
     height: 691px;

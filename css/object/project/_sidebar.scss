@@ -1,34 +1,122 @@
 @charset "UTF-8";
-/*.p-nav {
-    padding: 82px 46px;
-    color: #707070;
-
-    .p-nav-title {
-        font-size: 2.12rem;
-        font-weight: bold;
-        margin-bottom: 85px;
-        @include tab {
-            position: absolute;
-            right: 26px;
-            top:18px;
-          };
-    }
-    ul {
-        > li {
-            font-size: 1.5rem;
-            font-weight: bold;
-
-        }
-        ul {
-            margin: 40px 0;
-
-            > li {
-                padding-left: 20px;
-                font-size: 1.25rem;
-                font-weight: normal;
-                margin-bottom: 20px;
-            }
-        }
-    }
+.wrapper {
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
-*/
+.overlay {
+  display: none;
+  @include tab {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+}
+.overlay.open {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.menu-trigger {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #707070;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  position: static;
+  padding-top: 82px;
+  z-index: 100;
+  padding-left: 46px;
+  @include tab {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #707070;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    position: fixed;
+    padding: 0;
+    top: 14px;
+    right: 16px;
+    z-index: 100;
+    transform: translateX(0);
+    transition: transform 0.5s;
+  }
+}
+.menu-trigger::before {
+  content: "Menu";
+}
+.menu-trigger::after {
+  content: "×";
+  display: none;
+}
+
+.menu-trigger.active::before {
+  display: none;
+}
+.menu-trigger.active::after {
+  content: "Menu";
+  display: block;
+  @include tab {
+    content: "×";
+    font-size: 3rem;
+    margin-top: -20px;
+  }
+}
+
+nav {
+  width: 367px;
+  height: 100%;
+  padding-top: 100px;
+  background-color: #f2ede9;
+  position: static;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  @include tab {
+    position: fixed;
+    width: 367px;
+    transform: translate(367px);
+    transition: 0.5s;
+  }
+  @include tab {
+    width: 328px;
+  }
+}
+nav.open {
+  transform: translateZ(0);
+}
+nav > ul {
+  height: 100%;
+  @include tab {
+    overflow-y: scroll;
+  }
+  @include tab {
+    overflow-y: scroll;
+  }
+}
+nav > ul > li {
+  color: #707070;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 24px;
+  text-align: left;
+  font-weight: bold;
+  padding-left: 46px;
+  margin: 20px 0;
+}
+nav > ul > li > ul > li {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 20px;
+}
