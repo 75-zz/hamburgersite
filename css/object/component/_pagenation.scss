@@ -1,33 +1,61 @@
 @charset "UTF-8";
 .c-pagination {
     display: block;
-    width:500px ;
+    width: 500px;
     margin: 50px auto;
     position: relative;
-    p{
+    color: #707070;
+    font-weight: bold;
+    @include sp {
+        width: 334px;
+    }
+    p {
         position: absolute;
-        left:-100px;
-        padding-top: 10px;
+        left: -100px;
+        padding-top: 7px;
+        @include sp {
+            display: none;
+        }
 
     }
-    ul{
+    ul {
         display: flex;
-        li{
+        @include sp {
+        width: 100%;
+        justify-content: space-between;
+        }
+        li {
             width: 35px;
             height: 35px;
             border: 1px solid #707070;
             text-align: center;
             padding-top: 5px;
             margin: 0 10px;
+            @include sp {
+                display: none;
+            }
+        }
+        li.active {
+            background-color: #3c2b1c;
+            color: #fff;
         }
     }
-    ul::before{
-        content: "<<";
-        padding-top: 5px;
-    }
-    ul::after{
-        content: ">>";
-        padding-top: 5px;
-    }
+    ul::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f100";
+        padding-top: 8.5px;
+        @include sp {
+            content: "\f100  前へ";
+        }
 
+    }
+    ul::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f101";
+        padding-top: 8.5px;
+        @include sp {
+            content: "次へ \f101";
+        }
+
+    }
 }

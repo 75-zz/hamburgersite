@@ -1,21 +1,29 @@
 @charset "UTF-8";
 .p-content-archive{
    padding: 60px 100px;
+   color: #3C2A10;
+   @include tab{
+      padding: 36px 42px;
+   };
+   @include sp{
+      padding: 30px 22px;
+   };
    h2{
       font-size: 36px; 
       margin-bottom: 25px;
+      @include sp{
+         margin-bottom: 30px;
+      };
    }
    p{
       font-size: 16px;
       margin-bottom: 70px;
+      @include tab{
+         margin-bottom: 37px;
+      };
+      @include sp{
+         margin-bottom: 19px;
+      };
    }
-   button{
-       width: 292px;
-       height: 76px;
-       background-color: #fff;
-       color: #707070;
-       margin:50px auto;
-       border-radius: 76px;
-       display: block;
-   }
+   
 }

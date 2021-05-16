@@ -28,6 +28,9 @@
     };
     @include sp {
         font-size: 36px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 36px;
     };
 }
 .p-hero-archive__title span{
@@ -35,5 +38,7 @@ font-size:1rem ;
 font-family: "M+ 1m";
 vertical-align: middle;
 padding-left: 20px;
+@include sp {
+    padding-left: 0;
+};
 }
-
