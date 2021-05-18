@@ -785,6 +785,14 @@ li {
   margin-left: 86px;
 }
 
+.p-single__title {
+  align-self: center;
+  color: #fff;
+  font-family: "M+ 1m";
+  font-size: 60px;
+  margin-left: 86px;
+}
+
 .p-single-hero {
   background-image: url(../../img/single-hero.png);
   display: flex;
@@ -1332,6 +1340,10 @@ nav > ul > li > ul > li {
     margin-left: 25px;
   }
   .p-page__title {
+    font-size: 36px;
+    margin-left: 21px;
+  }
+  .p-single__title {
     font-size: 36px;
     margin-left: 21px;
   }

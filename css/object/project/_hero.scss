@@ -27,6 +27,17 @@
         margin-left: 21px;
     };
 }
+.p-single__title {
+    font-size: 60px;
+    font-family: "M+ 1m";
+    color: #fff;
+    align-self: center;
+    margin-left: 86px;
+    @include sp {
+        font-size: 36px;
+        margin-left: 21px;
+    };
+}
 
 .p-single-hero{
     background-image: url(../../img/single-hero.png);
