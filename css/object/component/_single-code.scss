@@ -1,0 +1,13 @@
+@charset "UTF-8";
+.c-code {
+    padding: 60px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    @include tab{
+        padding: 50px;
+    }
+    code {
+       text-align: left;
+        line-height: 1.5;
+    }
+}

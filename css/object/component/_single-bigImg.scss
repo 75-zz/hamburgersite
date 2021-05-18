@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.c-bigImg {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 60px;
+    @include tab {
+        width: 714px;
+        height: 264px;
+        img{
+            width: 100%;
+        }
+    }
+    @include sp {
+        width: 335px;
+        height: 124px;
+        margin-bottom: 30px;
+    }
+
+}

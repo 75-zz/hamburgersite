@@ -1,0 +1,20 @@
+@charset "UTF-8";
+.c-nomalImg {
+    width: 581px;
+    height: 358px;
+    margin:0 auto 60px;
+    @include tab{
+        margin:0 auto 241px;
+    }
+    @include sp{
+        width: 267px;
+        height: 166px;
+        margin:0 auto 30px;
+        }
+        img{
+            @include sp{
+                width: 100%;
+                }
+        
+        }
+}

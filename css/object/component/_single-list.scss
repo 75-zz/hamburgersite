@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.c-list {
+    padding: 60px;
+    font-size: 16px;
+    @include sp{
+        padding: 0;
+        margin: 20px 0;
+    }
+    > ul {
+        margin-bottom: 60px;
+    }
+    ul > li > ul {
+        margin: 20px;
+    }
+}

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+.c-bold {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 60px;
+    @include tab{
+        margin-bottom: 10px;
+    }
+    @include sp{
+        margin-bottom: 40px;
+    }
+}

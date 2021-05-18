@@ -366,8 +366,6 @@ li {
 }
 
 .l-hero-single {
-  background-image: url(../../img/single-hero.png);
-  display: flex;
   height: 530px;
   width: 100%;
 }
@@ -428,6 +426,22 @@ li {
   height: 76px;
   margin: 50px auto;
   width: 292px;
+}
+
+.c-blockquote {
+  background-color: #f5f5f5;
+  margin-bottom: 60px;
+  padding: 50px;
+  width: 100%;
+}
+
+.c-blockquote p {
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+
+.c-blockquote p:nth-child(2) {
+  margin-bottom: 0;
 }
 
 .c-branch__card {
@@ -529,6 +543,139 @@ li {
   padding-top: 8.5px;
 }
 
+.c-bigImg {
+  height: 500px;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.c-bold {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.c-button {
+  background: linear-gradient(#F2EDE9, #DED8D3);
+  border: 1px solid #707070;
+  border-radius: 20px;
+  font-size: 16px;
+  height: 104px;
+  margin-bottom: 60px;
+  text-align: center;
+  vertical-align: middle;
+  width: 429px;
+}
+
+.c-code {
+  background-color: #f5f5f5;
+  font-size: 16px;
+  padding: 60px;
+}
+
+.c-code code {
+  line-height: 1.5;
+  text-align: left;
+}
+
+.c-figure {
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.c-figure figure {
+  display: flex;
+  height: 358px;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.c-figure figure img {
+  width: 43%;
+}
+
+.c-figure figure figcaption {
+  font-size: 16px;
+  width: 54%;
+}
+
+.c-gridImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto 60px;
+  width: 100%;
+}
+
+.c-gridImg .c-item {
+  width: 438px;
+}
+
+.c-list {
+  font-size: 16px;
+  padding: 60px;
+}
+
+.c-list > ul {
+  margin-bottom: 60px;
+}
+
+.c-list ul > li > ul {
+  margin: 20px;
+}
+
+.c-nomalImg {
+  height: 358px;
+  margin: 0 auto 60px;
+  width: 581px;
+}
+
+.c-table {
+  margin: 50px 0;
+}
+
+.c-table table {
+  border: 1px solid #707070;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.c-table table tr {
+  border: 1px solid #707070;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.c-table table tr td {
+  border: 1px solid #707070;
+  border-collapse: collapse;
+  padding: 28px;
+}
+
+.c-table table tr td:first-child {
+  width: 31%;
+}
+
+.c-single-text * {
+  margin-bottom: 60px;
+}
+
+.c-single-text * h2 {
+  font-size: 36px;
+}
+
+.c-single-text * p {
+  font-size: 16px;
+}
+
+.c-single-text * h3 {
+  font-size: 28px;
+}
+
+.c-single-text * h4, .c-single-text * h5, .c-single-text * h6 {
+  font-size: 20px;
+}
+
 /* Project ------------ */
 .p-content-archive {
   color: #3C2A10;
@@ -628,6 +775,25 @@ li {
   font-size: 40px;
   margin-left: 85px;
   margin-left: 86px;
+}
+
+.p-page__title {
+  align-self: center;
+  color: #fff;
+  font-family: "M+ 1m";
+  font-size: 60px;
+  margin-left: 86px;
+}
+
+.p-single-hero {
+  background-image: url(../../img/single-hero.png);
+  display: flex;
+}
+
+.p-page-hero {
+  background-image: url(../../img/page-hero.png);
+  display: flex;
+  font-size: 60px;
 }
 
 .p-hero-archive__title {
@@ -807,6 +973,11 @@ nav > ul > li > ul > li {
   margin: 20px;
 }
 
+.p-single-wrapper {
+  color: #3C2A10;
+  padding: 60px 100px;
+}
+
 /* Utility ------------ */
 
 @media screen {
@@ -830,7 +1001,7 @@ nav > ul > li > ul > li {
     height: 285px;
   }
   .l-hero-single {
-    height: 285px;
+    height: 500px;
   }
   .l-main {
     width: 100vw;
@@ -868,6 +1039,13 @@ nav > ul > li > ul > li {
     margin: 45px auto;
     width: 163px;
   }
+  .c-blockquote {
+    margin-bottom: 30px;
+    padding: 30px 16px 30px 20px;
+  }
+  .c-blockquote p {
+    margin-bottom: 30px;
+  }
   .c-branch__card {
     height: 681px;
     padding: 12px 12px 0;
@@ -883,6 +1061,44 @@ nav > ul > li > ul > li {
   .c-branch__textarea dd {
     height: 76px;
     overflow: hidden;
+  }
+  .c-bigImg {
+    height: 264px;
+    width: 714px;
+  }
+  .c-bigImg img {
+    width: 100%;
+  }
+  .c-bold {
+    margin-bottom: 10px;
+  }
+  .c-code {
+    padding: 50px;
+  }
+  .c-figure figure {
+    height: 373px;
+    margin-bottom: 117px;
+  }
+  .c-figure figure img {
+    align-self: flex-start;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .c-gridImg {
+    margin: 0 auto;
+  }
+  .c-gridImg .c-item {
+    width: 349px;
+  }
+  .c-gridImg .c-item img {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .c-nomalImg {
+    margin: 0 auto 241px;
+  }
+  .c-table {
+    margin: 60px 0;
   }
   .p-content-archive {
     padding: 36px 42px;
@@ -904,7 +1120,7 @@ nav > ul > li > ul > li {
     padding-left: 0;
   }
   .p-hero__title {
-    font-size: 2.25rem;
+    font-size: 60px;
   }
   .p-hero-archive__title {
     font-size: 60px;
@@ -981,6 +1197,9 @@ nav > ul > li > ul > li {
   nav > ul {
     overflow-y: scroll;
   }
+  .p-single-wrapper {
+    padding: 60px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -988,6 +1207,9 @@ nav > ul > li > ul > li {
     background-image: url(../../img/archive-hero-sp.png);
     background-position: left;
     height: 283px;
+  }
+  .l-hero-single {
+    height: 225px;
   }
   .c-cards {
     flex-direction: column;
@@ -1040,6 +1262,55 @@ nav > ul > li > ul > li {
   .c-pagination ul::after {
     content: "次へ \f101";
   }
+  .c-bigImg {
+    height: 124px;
+    margin-bottom: 30px;
+    width: 335px;
+  }
+  .c-bold {
+    margin-bottom: 40px;
+  }
+  .c-button {
+    height: 81px;
+    margin-bottom: 30px;
+    width: 335px;
+  }
+  .c-figure figure {
+    height: 176px;
+    margin-bottom: 30px;
+  }
+  .c-figure figure figcaption {
+    height: 170px;
+    overflow: hidden;
+  }
+  .c-list {
+    margin: 20px 0;
+    padding: 0;
+  }
+  .c-nomalImg {
+    height: 166px;
+    margin: 0 auto 30px;
+    width: 267px;
+  }
+  .c-nomalImg img {
+    width: 100%;
+  }
+  .c-table {
+    font-size: 16px;
+    margin: 30px 0;
+  }
+  .c-table table tr td:first-child {
+    width: 41%;
+  }
+  .c-single-text * {
+    margin-bottom: 30px;
+  }
+  .c-single-text * h2 {
+    font-size: 28px;
+  }
+  .c-single-text * h3 {
+    font-size: 24px;
+  }
   .p-content-archive {
     padding: 30px 22px;
   }
@@ -1056,7 +1327,23 @@ nav > ul > li > ul > li {
     width: 90%;
   }
   .p-hero__title {
+    font-size: 36px;
+    margin-bottom: 30px;
     margin-left: 25px;
+  }
+  .p-page__title {
+    font-size: 36px;
+    margin-left: 21px;
+  }
+  .p-single-hero {
+    background-position: center;
+    background-size: cover;
+    font-size: 36px;
+  }
+  .p-page-hero {
+    background-position: center;
+    background-size: cover;
+    font-size: 36px;
   }
   .p-hero-archive__title {
     display: flex;
@@ -1091,5 +1378,8 @@ nav > ul > li > ul > li {
     height: 46px;
     padding: 12px 23px;
     width: 78px;
+  }
+  .p-single-wrapper {
+    padding: 20px;
   }
 }

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.c-figure {
+    width: 100%;
+    margin-bottom: 60px;
+    figure{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        height: 358px;
+        @include tab{
+            height: 373px;
+            margin-bottom: 117px;
+            img{
+                object-fit: contain;
+                align-self: flex-start;
+            }
+        }
+        @include sp{
+            height: 176px;
+            margin-bottom: 30px;
+        }
+        img{
+            width: 43%;
+        }
+        figcaption{
+            width: 54%;
+            font-size: 16px;
+            @include sp{
+                overflow: hidden;
+                height: 170px;
+            }
+    
+        }
+    }
+}

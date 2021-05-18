@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.c-blockquote {
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 50px;
+    margin-bottom: 60px;
+    @include tab {
+        padding: 30px 16px 30px 20px;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 16px;
+        margin-bottom: 60px;
+        @include tab {
+            margin-bottom: 30px;
+        }
+    }
+    p:nth-child(2) {
+        margin-bottom: 0;
+    }
+}

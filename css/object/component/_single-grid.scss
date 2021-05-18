@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.c-gridImg {
+    width: 100%;
+    margin:0 auto 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include tab{
+        margin:0 auto;
+    }
+    .c-item{
+        width: 438px;
+        @include tab{
+            width: 349px;
+            img{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
