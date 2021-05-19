@@ -317,6 +317,11 @@ li {
   list-style: none;
 }
 
+a {
+  color: #707070;
+  text-decoration: none;
+}
+
 /** 
 * Layout
 * ========================== */
@@ -975,7 +980,7 @@ nav > ul > li {
   text-align: left;
 }
 
-nav > ul > li > ul > li {
+nav > ul > li > ul > li > a {
   font-size: 20px;
   font-weight: normal;
   margin: 20px;
