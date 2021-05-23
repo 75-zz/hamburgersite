@@ -26,6 +26,6 @@
 
     function add_scripts() { 
         wp_enqueue_script('jquery');
-        wp_enqueue_script( 'drawer_menu', get_template_directory_uri() . '/js/drawer_menu.js', '', '1.0.0', true );
+        wp_enqueue_script( 'drawer_menu', get_template_directory_uri() . '/js/drawer_menu.js', '', '1.0.0', false );
     }
     add_action('wp_print_scripts', 'add_scripts');
