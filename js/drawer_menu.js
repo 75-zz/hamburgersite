@@ -1,4 +1,5 @@
-$('.menu-trigger').on('click',function(){
+jQuery(function($){
+   $('.menu-trigger').on('click',function(){
     if($(this).hasClass('active')){
       $(this).removeClass('active');
       $('nav').removeClass('open');
@@ -16,3 +17,4 @@ $('.menu-trigger').on('click',function(){
       $('nav').removeClass('open');      
     }
   });
+});
