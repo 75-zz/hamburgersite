@@ -1,51 +1,31 @@
-<?php get_header(); ?>
-                <div class="l-hero">
-                    <h2 class="p-hero__title">ダミーサイト</h2>
-                </div>
-                <section class="p-branch-contents">
-                    <div class="p-branch-wrapper">
-                        <article class="c-branch__card p-takeout">
-                            <h3>Take Out</h3>
+<?php
+    //テーマサポート
+    add_theme_support( 'menus' );
+    add_theme_support( 'title-tag' );
 
-                            <div class="c-branch__textarea">
-                                <dl>
-                                    <dt>小見出しが入ります</dt>
-                                    <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt>小見出しが入ります</dt>
-                                    <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    </dd>
-                                </dl>
-                            </div>
-                        </article>
-                        <article class="c-branch__card p-eatin">
-                            <h3>Eat In</h3>
-                            <div class="c-branch__textarea">
-                                <dl>
-                                    <dt>小見出しが入ります</dt>
-                                    <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    </dd>
-                                </dl>
-                                <dl>
-                                    <dt>小見出しが入ります</dt>
-                                    <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    </dd>
-                                </dl>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-                <section class="p-map">
-                    <article class="p-map-direction">
-                        <h3>見出しが入ります</h3>
-                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                        </p>
-                    </article>
-                    <img src="img/map.png" alt="周辺MAP">
-                </section>
-            </main>
-            <?php get_sidebar(); ?>
-               </div>
-        <?php get_footer(); ?>
+    //タイトル出力
+    function wpbeg_title( $title ) {
+        if ( is_front_page() && is_home() ) { //トップページなら
+            $title = get_bloginfo( 'name', 'display' );
+        } elseif ( is_singular() ) { //シングルページなら
+            $title = single_post_title( '', false );
+        }
+            return $title;
+        }
+    add_filter( 'pre_get_document_title', 'wpbeg_title' );
+
+    function wpbeg_script() {
+        wp_enqueue_style( 'mplus1p', '//fonts.googleapis.com/earlyaccess/mplus1p.css', array() );
+        wp_enqueue_style( 'Roboto', '//fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap', array() );
+        wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '5.15.1' );
+        wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.15.1/css/all.css', array(), '5.15.1' );
+        wp_enqueue_style( 'hamburger', get_template_directory_uri() . '/css/style.css', array(), '1.0.0' );
+        wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.0.0' );
+    }
+    add_action( 'wp_enqueue_scripts', 'wpbeg_script' );
+
+    function add_scripts() { 
+        wp_enqueue_script('jquery');
+        wp_enqueue_script( 'drawer_menu', get_template_directory_uri() . '/js/drawer_menu.js', '', '1.0.0', true );
+    }
+    add_action('wp_print_scripts', 'add_scripts');
