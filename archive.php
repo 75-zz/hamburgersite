@@ -1,127 +1,79 @@
-<!DOCTYPE html>
-<html lang="ja">
+<?php get_header(); ?>
+<div class="l-hero">
+    <h2 class="p-hero__title">ダミーサイト</h2>
+</div>
+<section class="p-branch-contents">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburger</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/app.css">
-</head>
-
-<body>
-    <div class="l-wrapper">
-        <div class="l-container">
-            <main class="l-main">
-                <header class="l-header">
-                    <div class="p-header">
-                        <p class="p-header__logo">Hamburger</p>
-                        <form action="#" method="post" class="p-search-form">
-                            <input type="search" name="s" value="" placeholder="&#xf002" class="p-search-form__keyword">
-                            <input type="submit" value="検索" class="p-search-form__submit">
-                        </form>
-                    </div>
-                </header>
-                <div class="l-hero-archive">
-                    <h1 class="p-hero-archive__title">Menu:<span>チーズバーガー</span></h1>
-                </div>
-                <section class="p-content-archive">
-                    <h2>小見出しが入ります</h2>
-                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                        <article class="c-cards">
-                           <img src="img/archive-fig-img.png" alt="ハンバーガー">
-                            <div class="c-cards__textarea">
-                                <h3>チーズバーガー</h3>
-                                <h4>小見出しが入ります</h4>
-                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                <button>詳しく見る</button>
-                            </div>
-                        </article>
-                        <article class="c-cards">
-                            <img src="img/archive-fig-img.png" alt="ハンバーガー">
-                        <div class="c-cards__textarea">
-                            <h3>ダブルチーズバーガー</h3>
-                            <h4>小見出しが入ります</h4>
-                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                            <button>詳しく見る</button>
-                        </div>
-                    </article>
-                    <article class="c-cards">
-                        <img src="img/archive-fig-img.png" alt="ハンバーガー">
-                    <div class="c-cards__textarea">
-                        <h3>スペシャルチーズバーガー</h3>
-                        <h4>小見出しが入ります</h4>
-                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                        <button>詳しく見る</button>
-                    </div>
-                </article>
-                </section>
-                <section class="c-pagination">
-                    <p>page 1/10</p>
-                    <ul>
-                        <li class="active">1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
-                        <li>9</li>
-                    </ul>
-                </section>
-            </main>
-            <aside class="l-sidebar">
-                <div class="wrapper">
-                    <div class="menu-trigger">
-                    </div>
-                    <nav>
-                        <ul>
-                            <li>バーガー
-                                <ul>
-                                    <li><a href="#">ハンバーガー</a></li>
-                                    <li><a href="#">チーズバーガー</a></li>
-                                    <li><a href="#">テリヤキバーガー</a></li>
-                                    <li><a href="#">アボカドバーガー</a></li>
-                                    <li><a href="#">フィッシュバーガー</a></li>
-                                    <li><a href="#">ベーコンバーガー</a></li>
-                                    <li><a href="#">チキンバーガー</a></li>
-                                </ul>
+    <?php
+    if (have_posts()) :
+        while (have_posts()) :
+            the_post(); ?>
+            <article class="c-cards">
+                <?php the_post_thumbnail(); ?>
+                <div class="c-cards__textarea">
+                    <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <ul class="post__meta">
+                            <li class="post__meta__item">
+                                <date class="post__meta__date"><?php echo get_the_date(); ?></date>
                             </li>
-                            <li>サイド
-                                <ul>
-                                    <li><a href="#">ポテト</a></li>
-                                    <li><a href="#">サラダ</a></li>
-                                    <li><a href="#">ナゲット</a></li>
-                                    <li><a href="#">コーン</a></li>
-                                </ul>
-                            </li>
-                            <li>ドリンク
-                                <ul>
-                                    <li><a href="#">コーラ</a></li>
-                                    <li><a href="#">ファンタ</a></li>
-                                    <li><a href="#">オレンジ</a></li>
-                                    <li><a href="#">アップル</a></li>
-                                    <li><a href="#">紅茶（Ice/Hot）</a></li>
-                                    <li><a href="#">コーヒー（Ice/Hot）</a></li>
-                                </ul>
-                            </li>
+                            <li class="post__meta__item"><i class="fa fa-folder" aria-hidden="true"><?php the_category(', '); ?></i></li>
+                            <li class="post__meta__item"><i class="fa fa-tag" aria-hidden="true"><?php the_tags(''); ?></i></li>
                         </ul>
-                    </nav>
-                    <div class="overlay"></div>
+
+                        <button><?php the_content('詳しく見る'); ?></button>
+                    </div>
                 </div>
-            </aside>
-        </div>
-        <footer class="l-footer p-footer">
-            <ul>
-                <li>ショップ情報</li>
-                <li>ヒストリー</li>
-            </ul>
-            <small>Copyright: RaiseTech</small>
-        </footer>
+            </article>
+        <?php endwhile;
+    else :
+        ?><p>表示する記事がありません</p><?php
+                            endif;
+                                ?>
+
+    <div class="p-branch-wrapper">
+        <article class="c-branch__card p-takeout">
+            <h3>Take Out</h3>
+
+            <div class="c-branch__textarea">
+                <dl>
+                    <dt>小見出しが入ります</dt>
+                    <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>小見出しが入ります</dt>
+                    <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    </dd>
+                </dl>
+            </div>
+        </article>
+        <article class="c-branch__card p-eatin">
+            <h3>Eat In</h3>
+            <div class="c-branch__textarea">
+                <dl>
+                    <dt>小見出しが入ります</dt>
+                    <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>小見出しが入ります</dt>
+                    <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    </dd>
+                </dl>
+            </div>
+        </article>
     </div>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/drawer_menu.js"></script>
-</body>
-</html>
+</section>
+<section class="p-map">
+    <article class="p-map-direction">
+        <h3>見出しが入ります</h3>
+        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+        </p>
+    </article>
+    <img src="img/map.png" alt="周辺MAP">
+</section>
+</main>
+<?php get_sidebar(); ?>
+</div>
+<?php get_footer(); ?>
