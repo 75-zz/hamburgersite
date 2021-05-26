@@ -470,10 +470,11 @@ a {
   flex-direction: column;
   height: 1193px;
   margin: 0 auto;
-  padding: 20px 20px 0;
+  padding: 20px 10px 0;
   position: relative;
-  width: 40%;
+  width: 100%;
 }
+
 
 .c-branch__card h3 {
   color: #fff;
@@ -500,7 +501,7 @@ a {
   height: 100%;
   margin: 0 auto;
   src: url(../../../font/mplus-1m-regular.ttf);
-  width: 100%;
+  width: 90%;
 }
 
 .c-branch__textarea dl {

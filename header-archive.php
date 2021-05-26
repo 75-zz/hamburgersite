@@ -12,7 +12,7 @@
     ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
     <div class="l-wrapper">
         <div class="l-container">
             <main class="l-main">
