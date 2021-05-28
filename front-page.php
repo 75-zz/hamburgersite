@@ -6,7 +6,7 @@
 
 
     <div class="p-branch-wrapper">
-    <a href="<?php bloginfo('template_directory'); ?> /category-take_out.php">
+    <a href="<?php echo get_page_link(64); ?>">
     <article class="c-branch__card p-takeout">
             <h3>Take Out</h3>
 
@@ -23,7 +23,7 @@
                 </dl>
             </div>
             </article></a>
-        <a href="<?php bloginfo('template_directory'); ?>category-eat_in.php">
+            <a href="<?php echo get_page_link(66); ?>">
         <article class="c-branch__card p-eatin">
             <h3>Eat In</h3>
             <div class="c-branch__textarea">

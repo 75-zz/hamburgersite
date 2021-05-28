@@ -1,5 +1,5 @@
 <?php /*
-Template Name:take_out
+Template Name:eat_in
 */
 ?>
 <?php get_header("archive"); ?>
